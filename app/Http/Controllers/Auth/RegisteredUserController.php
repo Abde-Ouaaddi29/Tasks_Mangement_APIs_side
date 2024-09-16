@@ -19,7 +19,7 @@ class RegisteredUserController extends Controller
     {
         $users = User::all();
         
-        return response()->json($users, 201);
+        return response()->json($users);
     }
     /**
      * Handle an incoming registration request.
