@@ -25,5 +25,5 @@ Route::middleware(['auth:sanctum'])->group(function () {
 
 // Todo routes
 
-Route::get('/users', [RegisteredUserController::class, 'index'])->middleware('auth:sanctum');
+Route::get('/users', [RegisteredUserController::class, 'index']);
 

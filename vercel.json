@@ -5,13 +5,13 @@
         "api/index.php": { "runtime": "vercel-php@0.6.0" }
     },
     "routes": [{
-        "src": "/(.*)",
-        "dest": "/api/index.php"
+         "src": "/api/(.*)",
+         "dest": "/api/index.php"
     }],
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "true",
-        "APP_URL": "https://yourproductionurl.com",
+        "APP_URL": "https://taskmanagementapisside-kdkk7ilm3-abderrahims-projects-cf45713d.vercel.app",
  
         "APP_CONFIG_CACHE": "/tmp/config.php",
         "APP_EVENTS_CACHE": "/tmp/events.php",
