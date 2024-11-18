@@ -18,12 +18,12 @@ Route::post('/login', [AuthenticatedSessionController::class, 'store']);
 
 // Route::get('/csrf-token', [CsrfController::class, 'index'])->name('csrf-token');
 // Auth routes
-Route::middleware(['auth:sanctum', 'web'])->group(function () {
+Route::middleware(['auth:sanctum'])->group(function () {
     Route::post('/logout', [AuthenticatedSessionController::class, 'destroy']);
     Route::apiResource('todos', TodoController::class);
 });
 
 // Todo routes
 
-Route::get('users', [RegisteredUserController::class, 'index']);
+Route::get('/users', [RegisteredUserController::class, 'index'])->middleware('auth:sanctum');
 
