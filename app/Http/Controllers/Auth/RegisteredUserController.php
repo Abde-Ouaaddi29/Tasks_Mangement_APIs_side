@@ -21,6 +21,13 @@ class RegisteredUserController extends Controller
         
         return response()->json($users);
     }
+
+    public function show(): JsonResponse
+    {        
+        return response()->json([
+            'message' => 'APIS showing !'
+        ]);
+    }
     /**
      * Handle an incoming registration request.
      *
